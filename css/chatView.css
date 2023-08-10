@@ -132,7 +132,7 @@ body{
 }
 .leftChat{
     background-color: white;
-    width: 30%;
+    max-width: max-content;
     height: 40px;
     margin: 10px 10px 5px;
     border: 0px;
@@ -144,7 +144,7 @@ body{
 .rightChat{
     float: right;
     background-color: white;
-    width: 30%;
+    max-width: max-content;
     height: 40px;
     border: 0px;
     border-radius: 5px;
