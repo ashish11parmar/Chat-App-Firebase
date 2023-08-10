@@ -4,7 +4,6 @@ import {getDatabase} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-da
 import {getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider}  from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js';
 
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBhxPL3MBL-SLYVGQl63M6k_UEVfuwROOs",
   authDomain: "chat-app-e882d.firebaseapp.com",
@@ -21,33 +20,8 @@ const database = getDatabase(app);
 const analytics = getAnalytics(app);
 const auth = getAuth();
 
-const Signup = document.getElementById("signup");
+
 const Google = document.getElementById("Google");
-
-Signup.addEventListener('click', (e)=>{
-e.preventDefault();
-
-const email = document.getElementById("email").value;
-const password = document.getElementById("password").value;
-
-createUserWithEmailAndPassword(auth, email, password)
-.then((userCredential) => {
-// Signed in 
-const user = userCredential.user;
-alert('user created')
-console.log(user);
-// ...
-})
-.catch((error) => {
-const errorCode = error.code;
-const errorMessage = error.message;
-// ..
-alert(errorMessage);
-console.log(errorCode);
-
-});
-
-});
 
 const provider = new GoogleAuthProvider();
 
