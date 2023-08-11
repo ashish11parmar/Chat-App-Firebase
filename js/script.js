@@ -44,6 +44,9 @@ Google.addEventListener('click', (e)=>{
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    // console.log(user);
+    // alert(user.displayName)
+    // alert(user.email)
 
     location.href = ("http://localhost:5500/chatView.html");
    
